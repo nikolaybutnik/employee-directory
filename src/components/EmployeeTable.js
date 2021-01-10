@@ -2,7 +2,7 @@ import React from 'react'
 import EmployeeItem from './EmployeeItem'
 
 const EmployeeTable = ({ employees }) => {
-  console.log(employees)
+  //   console.log(employees)
 
   const renderTableData = () => {
     return employees.map((employee, index) => (
@@ -11,6 +11,7 @@ const EmployeeTable = ({ employees }) => {
         picture={employee.picture.medium}
         fname={employee.name.first}
         lname={employee.name.last}
+        role={employee.role}
         email={employee.email}
         phone={employee.phone}
       />
@@ -24,6 +25,7 @@ const EmployeeTable = ({ employees }) => {
           <th>Photo</th>
           <th>First Name</th>
           <th>Last Name</th>
+          <th>Role</th>
           <th>Email</th>
           <th>Phone</th>
         </tr>
