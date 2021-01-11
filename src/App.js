@@ -36,7 +36,7 @@ function App() {
         filter={filter}
         setFilter={setFilter}
       />
-      <EmployeeTable employees={employees} />
+      <EmployeeTable employees={employees} setEmployees={setEmployees} />
     </>
   )
 }
