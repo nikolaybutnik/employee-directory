@@ -1,9 +1,8 @@
-// import logo from './logo.svg';
 import React, { useState, useEffect } from 'react'
 import './App.css'
-import EmployeeTable from './components/EmployeeTable'
+import EmployeeTable from './components/EmployeeTable/EmployeeTable'
 import Header from './components/Header'
-import Filter from './components/Filter'
+import Filter from './components/Filter/Filter'
 import API from './utils/API'
 import RoleGenerator from './utils/RoleGenerator'
 
@@ -25,7 +24,7 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div className="container">
       <Header />
       <Filter
         employees={employees}
@@ -34,7 +33,7 @@ function App() {
         setFilter={setFilter}
       />
       <EmployeeTable employees={employees} setEmployees={setEmployees} />
-    </>
+    </div>
   )
 }
 

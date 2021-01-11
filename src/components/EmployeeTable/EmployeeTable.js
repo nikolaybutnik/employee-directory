@@ -1,5 +1,6 @@
 import React from 'react'
-import EmployeeItem from './EmployeeItem'
+import EmployeeItem from '../EmployeeItem'
+import './EmployeeTable.css'
 
 const EmployeeTable = ({ employees, setEmployees }) => {
   const sortTable = (arr, num) => {
@@ -51,13 +52,13 @@ const EmployeeTable = ({ employees, setEmployees }) => {
         <tr>
           <th>Photo</th>
           <th onClick={() => sortTable(employees, 0)}>
-            <i className="fa fa-sort"></i>First Name
+            <i className="fa fa-sort"></i> First Name
           </th>
           <th onClick={() => sortTable(employees, 1)}>
-            <i className="fa fa-sort"></i>Last Name
+            <i className="fa fa-sort"></i> Last Name
           </th>
           <th onClick={() => sortTable(employees, 2)}>
-            <i className="fa fa-sort"></i>Role
+            <i className="fa fa-sort"></i> Role
           </th>
           <th>Email</th>
           <th>Phone</th>
