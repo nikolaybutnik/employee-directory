@@ -2,8 +2,6 @@ import React from 'react'
 import EmployeeItem from './EmployeeItem'
 
 const EmployeeTable = ({ employees, setEmployees }) => {
-  // console.log(employees)
-
   const sortTable = (arr, num) => {
     let sortedArr
     switch (num) {
@@ -25,18 +23,8 @@ const EmployeeTable = ({ employees, setEmployees }) => {
       default:
         break
     }
-    // console.log(arr)
-
-    // console.log(sortedArr)
     setEmployees(sortedArr)
   }
-
-  // useEffect(
-  //   (employees) => {
-  //     sortTable(employees)
-  //   },
-  //   [employees, sortTable]
-  // )
 
   const renderTableData = () => {
     const employeeArray = employees.map((employee, index) => (
@@ -51,11 +39,9 @@ const EmployeeTable = ({ employees, setEmployees }) => {
         checked={employee.checked}
       />
     ))
-    // console.log(employeeArray)
     const newArray = employeeArray.filter(
       (employee) => employee.props.checked === true
     )
-    // console.log(newArray)
     return newArray
   }
 

@@ -1,12 +1,8 @@
 import React from 'react'
 
 const Filter = ({ employees, setEmployees, filter, setFilter }) => {
-  //   console.log(setEmployees)
   const checkboxHandler = (event) => {
     setFilter({ ...filter, [event.target.value]: !filter[event.target.value] })
-    // console.log(filter)
-    // console.log(employees)
-    // console.log(event.target.value)
     const filteredEmployees = employees.map((employee) => {
       if (employee.role === event.target.value) {
         return { ...employee, checked: !employee.checked }

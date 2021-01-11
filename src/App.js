@@ -18,12 +18,9 @@ function App() {
   })
 
   useEffect(() => {
-    // API.getEmployees().then((res) => setEmployees(res.results))
     API.getEmployees().then((res) => {
-      // console.log(res.results)
       const updatedEmployees = RoleGenerator(res.results)
       setEmployees(updatedEmployees)
-      // console.log(updatedEmployees)
     })
   }, [])
 
