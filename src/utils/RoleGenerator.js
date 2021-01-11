@@ -10,6 +10,7 @@ const RoleGenerator = (arr) => {
   return arr.map((item) => ({
     ...item,
     role: devRoles[Math.floor(Math.random() * 5)],
+    checked: true,
   }))
 }
 

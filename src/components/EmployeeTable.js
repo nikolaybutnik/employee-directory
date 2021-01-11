@@ -2,10 +2,10 @@ import React from 'react'
 import EmployeeItem from './EmployeeItem'
 
 const EmployeeTable = ({ employees }) => {
-  //   console.log(employees)
+  console.log(employees)
 
   const renderTableData = () => {
-    return employees.map((employee, index) => (
+    const employeeArray = employees.map((employee, index) => (
       <EmployeeItem
         key={index}
         picture={employee.picture.medium}
@@ -14,8 +14,15 @@ const EmployeeTable = ({ employees }) => {
         role={employee.role}
         email={employee.email}
         phone={employee.phone}
+        checked={employee.checked}
       />
     ))
+    console.log(employeeArray)
+    const newArray = employeeArray.filter(
+      (employee) => employee.props.checked === true
+    )
+    // console.log(newArray)
+    return newArray
   }
 
   return (
