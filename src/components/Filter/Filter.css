@@ -1,6 +1,16 @@
 .checkbox {
   margin: 8px;
   font-weight: bold;
+  background-color: #f2f2f2;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  border: #c2c2c2 2px solid;
+  border-radius: 25px;
+}
+
+.checkbox:hover {
+  background-color: #c2c2c2;
 }
 
 label {
