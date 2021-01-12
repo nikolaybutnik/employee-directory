@@ -1,25 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EmployeeItem from '../EmployeeItem'
 import './EmployeeTable.css'
 
 const EmployeeTable = ({ employees, setEmployees }) => {
+  const [directionFirstName, setDirectionFirstName] = useState(true)
+  const [directionLastName, setDirectionLastName] = useState(true)
+  const [directionRole, setDirectionRole] = useState(true)
+
   const sortTable = (arr, num) => {
     let sortedArr
     switch (num) {
       case 0:
-        sortedArr = [...arr].sort((a, b) =>
-          a.name.first > b.name.first ? 1 : b.name.first > a.name.first ? -1 : 0
-        )
+        sortedArr = [...arr].sort((a, b) => {
+          if (directionFirstName) {
+            setDirectionFirstName(false)
+            return a.name.first > b.name.first
+              ? 1
+              : b.name.first > a.name.first
+              ? -1
+              : 0
+          } else {
+            setDirectionFirstName(true)
+            return a.name.first < b.name.first
+              ? 1
+              : b.name.first < a.name.first
+              ? -1
+              : 0
+          }
+        })
         break
       case 1:
-        sortedArr = [...arr].sort((a, b) =>
-          a.name.last > b.name.last ? 1 : b.name.last > a.name.last ? -1 : 0
-        )
+        sortedArr = [...arr].sort((a, b) => {
+          if (directionLastName) {
+            setDirectionLastName(false)
+            return a.name.last > b.name.last
+              ? 1
+              : b.name.last > a.name.last
+              ? -1
+              : 0
+          } else {
+            setDirectionLastName(true)
+            return a.name.last < b.name.last
+              ? 1
+              : b.name.last < a.name.last
+              ? -1
+              : 0
+          }
+        })
         break
       case 2:
-        sortedArr = [...arr].sort((a, b) =>
-          a.role > b.role ? 1 : b.role > a.role ? -1 : 0
-        )
+        sortedArr = [...arr].sort((a, b) => {
+          if (directionRole) {
+            setDirectionRole(false)
+            return a.role > b.role ? 1 : b.role > a.role ? -1 : 0
+          } else {
+            setDirectionRole(true)
+            return a.role < b.role ? 1 : b.role < a.role ? -1 : 0
+          }
+        })
         break
       default:
         break
