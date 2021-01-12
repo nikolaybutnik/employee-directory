@@ -30,7 +30,7 @@ This application makes an API call to randomuser.me to obtain dummy data to popu
 
 At the top of the screen there are five filter conditions avaiable. By default all five are selected. Unchecking the boxes will hide employees that correspond to the selected roles.
 
-It is also possible to sort the table by information in alphabetical order. To sort by first name, click the 'First Name' table heading. To sort by last name, click the 'Last Name' table heading. To sort by role, click the 'Role' table heading. For visual aid, sortable headings have an icon in their name.
+It is also possible to sort the table by information in alphabetical order. To sort by first name, click the 'First Name' table heading. To sort by last name, click the 'Last Name' table heading. To sort by role, click the 'Role' table heading. Clicking the heading once will sort the data in ascending order, and clicking it again will sort in descending order. For visual aid, sortable headings have an icon next to their name.
 
 ## License
 
